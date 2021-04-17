@@ -1,10 +1,16 @@
-# Wallet one payments
+### Wallet One payments
  
-Python 3 module for processing wallet one payments 
-!https://www.walletone.com/
+Python 3 package for processing Wallet One payments.
 
- ## Python
+Wallet one site: https://www.walletone.com
 
+##### Install
+
+```
+pip install wallet-one
+```
+
+##### Usage
 ```python
 from wallet_one import Payment
 
