@@ -4,8 +4,8 @@ Python 3 package for processing Wallet One payments.
 
 Wallet one site: https://www.walletone.com
 
-##### Install
 
+##### Install
 ```
 pip install wallet-one
 ```
@@ -40,7 +40,6 @@ payment = Payment(
 ```
 
 ##### Overloads
-
 ```python
 payment = Payment(
     # ... required fields
