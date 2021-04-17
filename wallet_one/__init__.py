@@ -13,18 +13,18 @@ class TypeCrypt(Enum):
     SHA1 = 2
 
 
-class PaymentForm(object):
-    """Wallet one payments form."""
+class Payment(object):
+    """Wallet one payments."""
 
     def __init__(
         self,
         merchant_id: str,
         amount: float,
         secret: str,
+        description: str,
+        url_success: str,
+        url_fail: str,
         currency: int = 643,
-        description: str = '',
-        url_success: str = None,
-        url_fail: str = None,
         override_fields: Dict = None,
         crypto_type: int = TypeCrypt.MD5.value,
     ):
@@ -72,10 +72,10 @@ class PaymentForm(object):
 
     @property
     def form(self) -> Dict:
-        """Returns form data for request."""
+        """Returns form data with signature for request."""
         form_data = dict(self._form)
         form_data.update({'WMI_SIGNATURE': self.signature})
-        return self._form
+        return form_data
 
     @property
     def signature(self) -> str:
