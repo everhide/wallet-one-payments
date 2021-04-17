@@ -38,3 +38,15 @@ payment = Payment(
 'b1VngBA5Y3aiWlPLPEdG9w=='
 
 ```
+
+##### Overloads
+
+```python
+payment = Payment(
+    # ... required fields
+    currency=840, # optional currency
+    override_fields={
+        'WMI_PAYMENT_NO': 'NLE-001',
+    },
+)
+```
