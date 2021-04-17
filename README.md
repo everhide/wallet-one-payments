@@ -4,8 +4,8 @@ Python 3 package for processing Wallet One payments.
 
 Wallet one site: https://www.walletone.com
 
-##### Install
 
+##### Install
 ```
 pip install wallet-one
 ```
@@ -37,4 +37,15 @@ payment = Payment(
 >>> payment.signature
 'b1VngBA5Y3aiWlPLPEdG9w=='
 
+```
+
+##### Overloads
+```python
+payment = Payment(
+    # ... required fields
+    currency=840, # optional currency
+    override_fields={
+        'WMI_PAYMENT_NO': 'NLE-001',
+    },
+)
 ```
